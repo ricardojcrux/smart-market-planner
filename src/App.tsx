@@ -97,7 +97,7 @@ function MainContent() {
   const isHome = location.pathname === "/";
 
   return (
-    <main className={isHome ? "" : "container mx-auto py-6 px-4"}>
+    <main className={isHome ? "" : "w-full max-w-screen-xl mx-auto py-6 px-4"}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
