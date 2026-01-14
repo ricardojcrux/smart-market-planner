@@ -74,6 +74,13 @@ export const SHOPPING_FREQUENCIES = [
   { value: "mensual", label: "Mensual" },
 ] as const;
 
+export const PRODUCT_UNITS = [
+  { value: "lb", label: "Libra (lb)" },
+  { value: "kg", label: "Kilogramo (kg)" },
+  { value: "pq", label: "Paquete (pq)" },
+  { value: "l", label: "Litro (l)" },
+] as const;
+
 export const MOCK_PRODUCTS = {
   carnes: [
     { id: "c1", name: "Pechuga de Pollo", unit: "kg" },
