@@ -9,11 +9,13 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import Planner from "./pages/Planner";
+import Settings from "./pages/Settings";
 import {
   LayoutDashboard,
   History as HistoryIcon,
   ShoppingCart,
   Menu,
+  Settings as SettingsIcon,
 } from "lucide-react";
 import { Button } from "./components/ui/button";
 
@@ -64,6 +66,16 @@ function Navbar() {
               >
                 <HistoryIcon className="h-4 w-4" /> Historial
               </Link>
+              <Link
+                to="/settings"
+                className={`flex items-center gap-2 transition-colors hover:text-foreground/80 ${
+                  location.pathname === "/settings"
+                    ? "text-foreground"
+                    : "text-foreground/60"
+                }`}
+              >
+                <SettingsIcon className="h-4 w-4" /> Configuración
+              </Link>
             </div>
           )}
         </div>
@@ -103,6 +115,7 @@ function MainContent() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/history" element={<History />} />
         <Route path="/planner" element={<Planner />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </main>
   );
